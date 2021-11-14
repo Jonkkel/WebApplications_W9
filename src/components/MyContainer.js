@@ -28,16 +28,16 @@ function MyContainer() {
 
     const updateItem = (id) =>{
         console.log(items[id-1].clicked)
+        const element = document.getElementsByTagName("li");
         if(items[id-1].clicked === true){
             console.log("jee1")
+            element[id-1].style.textDecoration = "";
             items[id-1].clicked = false
         }else{
             console.log("jee2")
+            element[id-1].style.textDecoration = "line-through";
             items[id-1].clicked = true
         }
-        const element = document.getElementsByTagName("li");
-        // console.log(element);
-        element[id-1].style.textDecoration = "line-through";
         setItems([...items])
     }
     
