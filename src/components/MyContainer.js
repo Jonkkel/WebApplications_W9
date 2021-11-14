@@ -1,9 +1,9 @@
 import MyList from "./MyList";
 import {useState} from "react"
 
-function MyContainer({ onAdd }) {
+function MyContainer() {
     const [text, setText] = useState('')
-
+    const header = "This is very important header"
     const [items, setItems] = useState([
         {id: "1",
          text: "this is an item"},
@@ -28,7 +28,9 @@ function MyContainer({ onAdd }) {
 
     return (
         <div>
-            <MyList items={items}/>
+            <MyList 
+            header={header}
+            items={items}/>
             <form onSubmit={onSubmit}>
                 <textarea placeholder="Add item" onChange={(e) => setText(e.target.value)} value={text}/>
                 <br></br>
