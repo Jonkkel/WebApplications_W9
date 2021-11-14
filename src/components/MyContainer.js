@@ -33,7 +33,7 @@ function MyContainer() {
         }else{
             items[id-1].clicked = true
         }
-        items[id-1].className= (items[id-1].clicked ? "myClass" : "")
+        items[id-1].className= (items[id-1].clicked ? "" : "myClass")
         setItems([...items])
         
         // document.getElementById(id).classList.add('myClass');
