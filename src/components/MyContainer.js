@@ -29,15 +29,16 @@ function MyContainer() {
     const updateItem = (id) =>{
         console.log(items[id-1].clicked)
         if(items[id-1].clicked === true){
+            console.log("jee1")
             items[id-1].clicked = false
         }else{
+            console.log("jee2")
             items[id-1].clicked = true
         }
-        items[id-1].className= (items[id-1].clicked ? "" : "myClass")
+        const element = document.getElementsByTagName("li");
+        // console.log(element);
+        element[id-1].style.textDecoration = "line-through";
         setItems([...items])
-        
-        // document.getElementById(id).classList.add('myClass');
-        // items[id-1].text.classList.add("myClass");
     }
     
     
