@@ -1,16 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from "react"
 import MyContainer from './components/MyContainer.js';
+import MyList from './components/MyList.js';
 
 function App() {
+
   return (
     <div className="App">
-      <MyContainer 
-      header="Really epic list component"
-      items = {[ 
-        {id: "1", text: "this is an item"},
-        {id: "2", text: "this is also an item"},
-      ]}/>
+      <h1>Hello world</h1>
+      <MyContainer/>
     </div>
   );
 }
