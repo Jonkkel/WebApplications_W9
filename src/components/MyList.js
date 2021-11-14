@@ -3,7 +3,7 @@ function MyList(props) {
     const items = props.items;
 
     const listItems = items.map((items) =>
-    <li key={items.id} onClick={() => props.updateItem(items.id)} className={items.clicked ? "myClass" : ""}>
+    <li key={items.id} onClick={() => props.updateItem(items.id)}>
         {items.text}
     </li>
     );
