@@ -1,6 +1,5 @@
-function MyList(props) {
-    const header = props.header;
-    const items = props.items;
+function MyList({items}) {
+    const header = "important header";
 
     const listItems = items.map((items) =>
     <li key={items.id}>
