@@ -41,15 +41,15 @@ function MyContainer() {
         }
         setItems([...items])
     }
-    const Component = () => {
-        return (<div> Hello Joona! </div>);
-    };
+    // const Component = ({ name }) => {
+    //     return (<div> Hello {name}! </div>);
+    // };
 
-    const wrapperWithName = MyHOC(Component);
+    // const wrapperWithName = MyHOC(Component, {name: "Kalle"});
 
     return (
         <div>
-            <wrapperWithName/>
+            {/* <wrapperWithName/> */}
             <MyList 
             updateItem={updateItem}
             items={items}/>

@@ -16,14 +16,14 @@ function Header() {
     const changeLanguage = (lang) =>{
         i18n.changeLanguage(lang);
     }
-    const useStyles = makeStyles({
-        // This group of buttons will be aligned to the right
-        rightToolbar: {
-          marginLeft: "auto",
-          marginRight: -12
-        }
-    })
-    const classes = useStyles();
+    // const useStyles = makeStyles({
+    //     // This group of buttons will be aligned to the right
+    //     rightToolbar: {
+    //       marginLeft: "auto",
+    //       marginRight: -12
+    //     }
+    // })
+    // const classes = useStyles();
     return (
       
     <Box sx={{ flexGrow: 1 }}>
@@ -39,14 +39,14 @@ function Header() {
         </Button>
     
 
-        <section className={classes.rightToolbar}>
+        {/* <section className={classes.rightToolbar}> */}
             <Button onClick={() => changeLanguage("fi")} variant="contained" color="primary"  id="fi">
                 fi
             </Button>
             <Button onClick={() => changeLanguage("en")} variant="contained" color="primary"  id="en">
                 en
             </Button>
-        </section>
+        {/* </section> */}
         </Toolbar>
       </AppBar>
     </Box>
