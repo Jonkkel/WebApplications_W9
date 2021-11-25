@@ -1,8 +1,5 @@
 import MyList from "./MyList";
 import {useState} from "react";
-// import MyHOC from "./MyHOC.js";
-// import Component from "./Component";
-
 
 function MyContainer() {
     const [text, setText] = useState('')
@@ -40,8 +37,6 @@ function MyContainer() {
             items[id-1].clicked = true
         }
         setItems([...items])
-    }
-    // const SimpleHOC = MyHOC(Component);
 
     return (
         <div>
