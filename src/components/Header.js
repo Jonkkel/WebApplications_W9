@@ -5,8 +5,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import { Button} from '@material-ui/core';
 import { useTranslation } from 'react-i18next';
-
-import Grid from '@mui/material/Grid'
+import { makeStyles } from "@material-ui/core/styles";
 // import MenuIcon from '@mui/icons-material/Menu';
 
 
@@ -17,30 +16,37 @@ function Header() {
     const changeLanguage = (lang) =>{
         i18n.changeLanguage(lang);
     }
-  return (
+    const useStyles = makeStyles({
+        // This group of buttons will be aligned to the right
+        rightToolbar: {
+          marginLeft: "auto",
+          marginRight: -12
+        }
+    })
+    const classes = useStyles();
+    return (
       
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-            <Grid justify="space-between" container spacing={100}>
-                <Grid item>
+            
+                
                     <Button component={Link} to="/" variant="contained" color="primary">
                         {t("Home")}
                     </Button>
                     <Button component={Link} to="/about" variant="contained" color="primary">
                         {t("About")}
                     </Button>
-                </Grid>
+                
 
-                <Grid item>
-                    <Button onClick={() => changeLanguage("fi")} variant="contained" color="primary"  id="fi">
-                        fi
-                    </Button>
-                    <Button onClick={() => changeLanguage("en")} variant="contained" color="primary"  id="en">
-                        en
-                    </Button>
-                </Grid>
-            </Grid>
+                    <section className={classes.rightToolbar}>
+                        <Button onClick={() => changeLanguage("fi")} variant="contained" color="primary"  id="fi" float="right">
+                            fi
+                        </Button>
+                        <Button onClick={() => changeLanguage("en")} variant="contained" color="primary"  id="en">
+                            en
+                        </Button>
+                    </section>
         </Toolbar>
       </AppBar>
     </Box>
