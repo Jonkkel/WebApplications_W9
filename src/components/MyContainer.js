@@ -52,5 +52,6 @@ function MyContainer() {
         </div>
     );
 }
+}
   
 export default MyContainer;
