@@ -1,5 +1,8 @@
+import { useTranslation } from 'react-i18next';
+import React, {Suspense} from 'react';
+
 function MyList(props) {
-    const header = props.header;
+    const { t, i18n } = useTranslation();
     const items = props.items;
 //  className={items.clicked ? "myClass" : ""}
     const listItems = items.map((items) =>
@@ -9,13 +12,20 @@ function MyList(props) {
     );
     return (
         <div>
-            <h1>{header}</h1>
+            <h1>{t("front-page-text")}</h1>
             <ol>
                 {listItems}
             </ol>
-
         </div>
     );
   }
   
-  export default MyList;
+
+export default function App(props){
+    return(
+        
+        <Suspense fallback="loading">
+            <MyList {...props} />
+        </Suspense>
+    )
+}

@@ -4,7 +4,6 @@ import {useState} from "react"
 
 function MyContainer() {
     const [text, setText] = useState('')
-    const header = "This is very important header"
     const [items, setItems] = useState([
         {id: "1",
          text: "this is an item",
@@ -48,7 +47,6 @@ function MyContainer() {
         <div>
             <MyList 
             updateItem={updateItem}
-            header={header}
             items={items}/>
             <form onSubmit={onSubmit}>
                 <textarea placeholder="Add item" onChange={(e) => setText(e.target.value)} value={text}/>
