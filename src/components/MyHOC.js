@@ -11,7 +11,7 @@ const MyHOC = (OriginalComponent, props) => {
             )
         }
         
-    return newComponent;
+    return newComponent();
 };
 
 export default MyHOC;
