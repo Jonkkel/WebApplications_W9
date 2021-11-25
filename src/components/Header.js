@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+import { Link as RouterLink } from "react-router-dom";
 import React, {Suspense} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -28,10 +28,10 @@ function Header() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-            <Button component={Link} to="/" color="primary">
+            <Button component={RouterLink} to="/" color="primary">
                 {t("Home")}
             </Button>
-            <Button component={Link} to="/about" color="primary">
+            <Button component={RouterLink} to="/about" color="primary">
                 {t("About")}
             </Button>
     

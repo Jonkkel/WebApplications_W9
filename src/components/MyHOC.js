@@ -1,12 +1,10 @@
 
 
-const MyHOC = ( OriginalComponent ) => {
-    // const NewComponent = (props) => {
-
-    // }
+const MyHOC = (OriginalComponent, props) => {
+        
     return (
     <div className = "wrapper">
-        <OriginalComponent/>
+        < OriginalComponent name={props} />
     </div>
     )
 };
