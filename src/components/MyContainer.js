@@ -1,6 +1,8 @@
 import MyList from "./MyList";
 import {useState} from "react"
 
+import MyHOC from "./MyHOC";
+
 
 function MyContainer() {
     const [text, setText] = useState('')
@@ -39,15 +41,19 @@ function MyContainer() {
         }
         setItems([...items])
     }
-    
-    
-    
+    const Component = () => {
+        return (<div> Hello Joona! </div>);
+    };
+
+    const wrapperWithName = MyHOC(Component);
 
     return (
         <div>
+            <wrapperWithName/>
             <MyList 
             updateItem={updateItem}
             items={items}/>
+            
             <form onSubmit={onSubmit}>
                 <textarea placeholder="Add item" onChange={(e) => setText(e.target.value)} value={text}/>
                 <br></br>

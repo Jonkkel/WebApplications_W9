@@ -31,22 +31,22 @@ function Header() {
         <Toolbar>
             
                 
-                    <Button component={Link} to="/" variant="contained" color="primary">
-                        {t("Home")}
-                    </Button>
-                    <Button component={Link} to="/about" variant="contained" color="primary">
-                        {t("About")}
-                    </Button>
-                
+        <Button component={Link} to="/" variant="contained" color="primary">
+            {t("Home")}
+        </Button>
+        <Button component={Link} to="/about" variant="contained" color="primary">
+            {t("About")}
+        </Button>
+    
 
-                    <section className={classes.rightToolbar}>
-                        <Button onClick={() => changeLanguage("fi")} variant="contained" color="primary"  id="fi" float="right">
-                            fi
-                        </Button>
-                        <Button onClick={() => changeLanguage("en")} variant="contained" color="primary"  id="en">
-                            en
-                        </Button>
-                    </section>
+        <section className={classes.rightToolbar}>
+            <Button onClick={() => changeLanguage("fi")} variant="contained" color="primary"  id="fi">
+                fi
+            </Button>
+            <Button onClick={() => changeLanguage("en")} variant="contained" color="primary"  id="en">
+                en
+            </Button>
+        </section>
         </Toolbar>
       </AppBar>
     </Box>

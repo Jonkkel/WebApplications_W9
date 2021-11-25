@@ -1,10 +1,14 @@
 
 
-const Component = ({name }) => {
+const MyHOC = ( OriginalComponent ) => {
+    // const NewComponent = (props) => {
+
+    // }
     return (
     <div className = "wrapper">
-        <div>Hello {name}! </div>;
+        <OriginalComponent/>
     </div>
     )
-}
-export default Component;
+};
+
+export default MyHOC;
