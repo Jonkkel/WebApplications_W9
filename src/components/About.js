@@ -1,30 +1,39 @@
-import { useEffect } from "react";
+import {useState, useEffect } from "react";
 
 function About(props) {
+    const [data, setData] = useState([]);
 
     useEffect(() => {
         let mounted = true;
         async function doStuff(){
-            const a = await fetch("https://jsonplaceholder.typicode.com/posts")
-            // .then(response => response.json())
-            // // 4. Setting *dogImage* to the image url that we received from the response above
-            // .then(data => setDogImage(data.message))
-            const b = {};
-
+            const response =  fetch("https://jsonplaceholder.typicode.com/posts")
+            .then(response => response.json())
+            .then((data) => {
+                setData(data)
+            })
+        
             if (mounted){
-                // setSomeStuff(b);
+                
             }
         }
         doStuff();
-
         return () => {
             mounted = false;
         }
     }, []);
+    
 
+    // console.log(listItems)
     return (
         <div>
             <h2>About page</h2>
+            <ul>
+                {data.map((items) =>
+                <li key={items.id}>
+                    {items.title}
+                </li>
+                )}
+            </ul>
         </div>
     );
   }
