@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import React, {Suspense} from 'react';
 
 function MyList(props) {
-    const { t, i18n } = useTranslation();
+    const { t} = useTranslation();
     const items = props.items;
 //  className={items.clicked ? "myClass" : ""}
     const listItems = items.map((items) =>
