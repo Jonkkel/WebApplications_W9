@@ -1,12 +1,12 @@
 import React from 'react'
 
 
-const MyHOC = (OriginalComponent) => {
-        const newComponent = (props) =>{
+const MyHOC = (OriginalComponent, props) => {
+        const newComponent = () =>{
             
             return (
                 <div className="wrapper">
-                    < OriginalComponent name={props.name} {...props}/>
+                    < OriginalComponent {...props}/>
                 </div>
             )
         }
