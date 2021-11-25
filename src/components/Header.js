@@ -16,37 +16,34 @@ function Header() {
     const changeLanguage = (lang) =>{
         i18n.changeLanguage(lang);
     }
-    // const useStyles = makeStyles({
-    //     // This group of buttons will be aligned to the right
-    //     rightToolbar: {
-    //       marginLeft: "auto",
-    //       marginRight: -12
-    //     }
-    // })
-    // const classes = useStyles();
+    const useStyles = makeStyles({
+        rightToolbar: {
+          marginLeft: "auto",
+          marginRight: -12
+        }
+    })
+    const classes = useStyles();
     return (
       
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-            
-                
-        <Button component={Link} to="/" variant="contained" color="primary">
-            {t("Home")}
-        </Button>
-        <Button component={Link} to="/about" variant="contained" color="primary">
-            {t("About")}
-        </Button>
+            <Button component={Link} to="/" color="primary">
+                {t("Home")}
+            </Button>
+            <Button component={Link} to="/about" color="primary">
+                {t("About")}
+            </Button>
     
 
-        {/* <section className={classes.rightToolbar}> */}
-            <Button onClick={() => changeLanguage("fi")} variant="contained" color="primary"  id="fi">
-                fi
-            </Button>
-            <Button onClick={() => changeLanguage("en")} variant="contained" color="primary"  id="en">
-                en
-            </Button>
-        {/* </section> */}
+            <section className={classes.rightToolbar}>
+                <Button onClick={() => changeLanguage("fi")} color="primary"  id="fi">
+                    fi
+                </Button>
+                <Button onClick={() => changeLanguage("en")}  color="primary"  id="en">
+                    en
+                </Button>
+            </section>
         </Toolbar>
       </AppBar>
     </Box>
