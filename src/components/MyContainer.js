@@ -1,7 +1,7 @@
 import MyList from "./MyList";
-import {useState} from "react"
-
-import MyHOC from "./MyHOC";
+import {useState} from "react";
+// import MyHOC from "./MyHOC.js";
+// import Component from "./Component";
 
 
 function MyContainer() {
@@ -41,15 +41,10 @@ function MyContainer() {
         }
         setItems([...items])
     }
-    // const Component = ({ name }) => {
-    //     return (<div> Hello {name}! </div>);
-    // };
-
-    // const wrapperWithName = MyHOC(Component, {name: "Kalle"});
+    // const SimpleHOC = MyHOC(Component);
 
     return (
         <div>
-            {/* <wrapperWithName/> */}
             <MyList 
             updateItem={updateItem}
             items={items}/>
