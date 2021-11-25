@@ -37,7 +37,7 @@ function MyContainer() {
             items[id-1].clicked = true
         }
         setItems([...items])
-
+    }
     return (
         <div>
             <MyList 
@@ -51,7 +51,7 @@ function MyContainer() {
             </form>
         </div>
     );
-}
+
 }
   
 export default MyContainer;

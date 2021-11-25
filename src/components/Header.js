@@ -1,4 +1,4 @@
-import { Link as RouterLink } from "react-router-dom";
+import {Link} from 'react-router-dom'
 import React, {Suspense} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -28,19 +28,19 @@ function Header() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-            <Button component={RouterLink} to="/" color="primary">
+            <Button component={Link} to="/" variant="contained" color="primary">
                 {t("Home")}
             </Button>
-            <Button component={RouterLink} to="/about" color="primary">
+            <Button component={Link} to="/about" variant="contained" color="primary">
                 {t("About")}
             </Button>
     
 
             <section className={classes.rightToolbar}>
-                <Button onClick={() => changeLanguage("fi")} color="primary"  id="fi">
+                <Button onClick={() => changeLanguage("fi")} variant="contained" color="primary"  id="fi">
                     fi
                 </Button>
-                <Button onClick={() => changeLanguage("en")}  color="primary"  id="en">
+                <Button onClick={() => changeLanguage("en")} variant="contained" color="primary"  id="en">
                     en
                 </Button>
             </section>
