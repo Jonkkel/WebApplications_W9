@@ -3,7 +3,7 @@ import React, {Suspense} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import { Button} from '@material-ui/core';
+import Button from "@mui/material/Button";
 import { useTranslation } from 'react-i18next';
 import { makeStyles } from "@material-ui/core/styles";
 // import MenuIcon from '@mui/icons-material/Menu';
