@@ -6,7 +6,7 @@ const MyHOC = (OriginalComponent) => {
             
             return (
                 <div className="wrapper">
-                    < OriginalComponent {...props}/>
+                    < OriginalComponent name={props.name} {...props}/>
                 </div>
             )
         }
